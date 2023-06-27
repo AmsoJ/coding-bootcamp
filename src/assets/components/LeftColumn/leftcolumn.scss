@@ -39,6 +39,14 @@
                 &.active {
                     top: 0;
                 }
+                @media screen and (max-width: 600px) {
+                    .role {
+                        font-size: 15px;
+                    }
+                    .name {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
