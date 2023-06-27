@@ -10,21 +10,42 @@
             }
         }
         .footer-block {
-            min-height: 35px;
             overflow: hidden;
-            > * {
+            min-height: 35px;
+            .detail {
+                min-height: 35px;
+                overflow: hidden;
+                transition: .1s;
                 position: absolute;
-                top: 100px;
+                top: 200px;
+                gap: 30px;
                 left: 0;
-                transition: .3s;
-                &.role {
-                    left: 300px;
-                    transition-delay: .2s;
+                overflow: hidden;
+                .role {
+                    transform: translateY(200px);
+                    transition-delay: .1s;
+                    transition: .3s;
+                    &.active {
+                        transform: translate(0px);
+                    }
+                }
+                .name {
+                    transform: translateY(-200px);
+                    transition: .2s;
+                    &.active {
+                        transform: translate(0px);
+                    }
                 }
                 &.active {
                     top: 0;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-column {
+        margin-left: 10px;
     }
 }

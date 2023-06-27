@@ -19,10 +19,10 @@ function LeftColumn() {
                     {review.map((item, itemIndex) => {
                         let showNameRole = "null";
                         (itemIndex === index) && (showNameRole = "active");
-                        return <>
-                            <h4 className={`name ${showNameRole}`} key={item.id}>{item.name}</h4>
-                            <small className={`role ${showNameRole}`} key={item.id}>{item.role}</small>
-                        </>
+                        return <div className={`detail d-flex w-100 ${showNameRole}`} key={item.id}>
+                            <h4 className={`name ${showNameRole}`}>{item.name}</h4>
+                            <small className={`role ${showNameRole}`} >{item.role}</small>
+                        </div>
                     })}
                 </figcaption>
             </figure>
