@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+@import './color';
+
+body {
+    min-height: 100vh;
+    // overflow: hidden;
+}
+#root {
+    height: inherit;
+}
+.parent-wrap {
+    .curve {
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+// global 
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    color: $Dark-Blue;
+    margin: 0;
+}
+p {
+    font-size: 1.5rem;
+}

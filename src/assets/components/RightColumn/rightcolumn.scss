@@ -1,0 +1,45 @@
+@import './../../paint/color';
+
+.right-column {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: -2;
+    background-image: url(./../../images/pattern-bg.svg);
+    background-position: 0 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .profile-pic-board {
+        position: relative;
+        aspect-ratio: 1/1;
+        .profile-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            height: 95%;
+            object-fit: cover;
+            clip-path: circle(20px at 20% 20%);
+            opacity: 0;
+            &.active {
+                clip-path: circle(100% at 50% 50%);
+                opacity: 1;
+                transition: clip-path 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+        .button-group {
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            z-index: 5;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .right-column {
+        position: static;
+        transform: translateY(0%);
+    }
+}

@@ -1,0 +1,30 @@
+@import './../../paint/color';
+
+.left-column {
+    pointer-events: none;
+    .quote-board {
+        .bq {
+            .icon {
+                top: -30px;
+                left: 20px;
+            }
+        }
+        .footer-block {
+            min-height: 35px;
+            overflow: hidden;
+            > * {
+                position: absolute;
+                top: 100px;
+                left: 0;
+                transition: .3s;
+                &.role {
+                    left: 300px;
+                    transition-delay: .2s;
+                }
+                &.active {
+                    top: 0;
+                }
+            }
+        }
+    }
+}
